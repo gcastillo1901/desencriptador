@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Encriptador / Desencriptador</title>
+  </head>
+  <body>
+    <div id="background-container">
+      <div id="container">
+        <h1>Encriptador / Desencriptador</h1>
+
+        <div id="sectionsContainer">
+          <section id="inputSection">
+            <textarea
+              id="inputText"
+              placeholder="Ingresa el texto. No se permiten mayúsculas ni caracteres especiales."
+            ></textarea
+            ><br />
+            <div id="buttonContainer">
+              <button onclick="encrypt()">Encriptar</button>
+              <button onclick="decrypt()">Desencriptar</button>
+            </div>
+          </section>
+
+          <section id="outputSection">
+            <textarea id="outputText" readonly></textarea><br />
+            <div id="resultBox"></div>
+            <div id="buttonContainer">
+              <button onclick="copyToClipboard()">
+                Copiar Resultado
+              </button>
+              <button onclick="resetText()">Reset</button>
+            </div>
+          </section>
+        </div>
+        <!-- <ul id="socialMedia">
+            <li><a href="https://twitter.com/gcastillo1901" target="_blank"><img src="images/twitter.png" alt="Twitter/X"/></a></li>
+            <li><a href="https://github.com/gcastillo1901/" target="_blank"><img src="images/GitHub-logo.jpg" alt="GitHub"/></a></li>
+          </ul>
+        -->
+      </div>
+             
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
