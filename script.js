@@ -51,10 +51,17 @@ function displayResult(result) {
 }
 
 function copyToClipboard() {
+  let outputText = document.getElementById('outputText').value.trim();
+  if (outputText === "") {
+    alert('No hay texto para copiar.');
+    return;
+  }else
+  {
   let outputText = document.getElementById('outputText');
   outputText.select();
   document.execCommand('copy');
   alert('Texto copiado al portapapeles: ' + outputText.value);
+}
 }
 
 function resetText() {
