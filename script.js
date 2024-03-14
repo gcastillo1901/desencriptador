@@ -1,5 +1,15 @@
 function encrypt() {
-  let inputText = document.getElementById('inputText').value.toLowerCase();
+  let inputText = document.getElementById('inputText').value.trim();
+
+  if (inputText === "") {
+  let outputText = document.getElementById('outputText');
+  outputText.style.backgroundImage = 'url("images/searching.png")';
+  outputText.style.backgroundSize = 'contain'; // Puedes ajustar esto según tus preferencias
+  outputText.style.backgroundRepeat = 'no-repeat';
+  outputText.style.backgroundPosition = 'center';
+  outputText.style.color = 'transparent'; // Hace que el texto sea transparente para mostrar la imagen de fondo
+  } else { 
+  document.getElementById('inputText').value.toLowerCase();
   let outputText = inputText.replace(/e/g, 'enter')
                             .replace(/i/g, 'imes')
                             .replace(/a/g, 'ai')
@@ -9,20 +19,19 @@ function encrypt() {
   document.getElementById('outputText').value = outputText;
   displayResult(outputText);
 }
-
-/*function decrypt() {
-  let inputText = document.getElementById('outputText').value.toLowerCase();
-  let originalText = inputText.replace(/enter/g, 'e')
-                               .replace(/imes/g, 'i')
-                               .replace(/ai/g, 'a')
-                               .replace(/ober/g, 'o')
-                               .replace(/ufat/g, 'u');
-
-  document.getElementById('inputText').value = originalText;
-  displayResult(originalText);
-}*/
+}
 
 function decrypt() {
+  let inputText = document.getElementById('inputText').value.trim();
+
+  if (inputText === "") {
+  let outputText = document.getElementById('outputText');
+  outputText.style.backgroundImage = 'url("images/searching.png")';
+  outputText.style.backgroundSize = 'contain'; // Puedes ajustar esto según tus preferencias
+  outputText.style.backgroundRepeat = 'no-repeat';
+  outputText.style.backgroundPosition = 'center';
+  outputText.style.color = 'transparent'; // Hace que el texto sea transparente para mostrar la imagen de fondo
+  } else { 
   let inputText = document.getElementById('inputText').value.toLowerCase();
   let outputText = inputText.replace(/enter/g, 'e')
                                .replace(/imes/g, 'i')
@@ -32,6 +41,7 @@ function decrypt() {
 
   document.getElementById('outputText').value = outputText;
   displayResult(outputText);
+}
 }
 
 function displayResult(result) {
