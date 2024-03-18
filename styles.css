@@ -30,6 +30,14 @@ h1 {
   color: darkcyan;
 }
 
+p {
+  text-align: center;
+  font-family:'Courier New', Courier, monospace;
+  font-style: italic;
+  font-weight: bold;
+  color: darkcyan;
+}
+
 #sectionsContainer {
   display: flex;
   justify-content: space-between;
